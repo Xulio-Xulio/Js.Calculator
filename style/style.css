@@ -25,15 +25,15 @@ body {
     color: white;
 } 
 
-.answer { 
-    float: right;
+.input_result{ 
+    height: 140px;
     padding-right: 10px;
     padding-top: 40px;
-    text-align: center;
+    text-align: right;
     font-size: 40px;
 }
 
-.calculator-button {
+.calculator_button {
     width: 144px;
     height: 100px;
     margin-top: 20px;
@@ -45,7 +45,7 @@ body {
     border: none;
 }
 
-.calculator-button:hover {
+.calculator_button:hover {
     opacity: 90%;
 }
 

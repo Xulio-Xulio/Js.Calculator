@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="/style/bootstrap-4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- Style CSS -->
     <link rel="stylesheet" href="/style/style.css">
-    <!-- Open Iconic -->
-    <link rel="stylesheet" href="/style/open-iconic-master/font/css/open-iconic-bootstrap.min.css">
     <!-- Normalize -->
     <link rel="stylesheet" href="/style/normalize.css">
     
@@ -25,29 +23,33 @@
     
       <section class="calculator">
         <div class="calculator-screen">
-          <p class="text-monospace answer" id="answer"> 20 + 20</p>
+          <input type="text" id="result" class="input_result form-control resultado" placeholder="0" disabled="disabled" />
         </div>
         <div>
-          <input class="calculator-button text-monospace ml-2 mr-3" type="button" value="(">
-          <input class="calculator-button text-monospace mr-3" type="button" value=")">
-          <input class="calculator-button text-monospace mr-3" type="button" value="%">
-          <input class="calculator-button text-monospace" type="button" value="AC">
-          <input class="calculator-button numbers-button text-monospace ml-2 mr-3" type="button" value="7">
-          <input class="calculator-button numbers-button text-monospace mr-3" type="button" value="8">
-          <input class="calculator-button numbers-button text-monospace mr-3" type="button" value="9">
-          <input class="calculator-button text-monospace" type="button" value="/">
-          <input class="calculator-button numbers-button text-monospace ml-2 mr-3" type="button" value="4">
-          <input class="calculator-button numbers-button text-monospace mr-3" type="button" value="5">
-          <input class="calculator-button numbers-button text-monospace mr-3" type="button" value="6">
-          <input class="calculator-button text-monospace" type="button" value="x">
-          <input class="calculator-button numbers-button text-monospace ml-2 mr-3" type="button" value="1">
-          <input class="calculator-button numbers-button text-monospace mr-3" type="button" value="2">
-          <input class="calculator-button numbers-button text-monospace mr-3" type="button" value="3">
-          <input class="calculator-button text-monospace" type="button" value="-">
-          <input class="calculator-button numbers-button text-monospace ml-2 mr-3" type="button" value="0">
-          <input class="calculator-button numbers-button text-monospace mr-3" type="button" value=".">
-          <input class="calculator-button text-monospace bg-warning mr-3" type="button" value="=">
-          <input class="calculator-button text-monospace" type="button" value="+">
+          <button class="calculator_button text-monospace ml-2 mr-3" onclick="calcular(`action`, `(`)" type="button">(</button>
+          <button class="calculator_button text-monospace mr-3" onclick="calcular(`action`, `)`)" type="button">)</button>
+          <button class="calculator_button text-monospace mr-3" onclick="calcular(`action`, `%`)" type="button">%</button>
+          <button class="calculator_button text-monospace" onclick="calcular(`action`, `ac`)" type="button">AC</button>
+
+          <button class="calculator_button number_button text-monospace ml-2 mr-3" onclick="calcular(`value`, 7)" type="button">7</button>
+          <button class="calculator_button number_button text-monospace mr-3" onclick="calcular(`value`, 8)" type="button">8</button>
+          <button class="calculator_button number_button text-monospace mr-3" onclick="calcular(`value`, 9)" type="button">9</button>
+          <button class="calculator_button text-monospace" onclick="calcular(`action`, `/`)" type="button">/</button>
+
+          <button class="calculator_button number_button text-monospace ml-2 mr-3" onclick="calcular(`value`, 4)" type="button">4</button>
+          <button class="calculator_button number_button text-monospace mr-3" onclick="calcular(`value`, 5)" type="button">5</button>
+          <button class="calculator_button number_button text-monospace mr-3" onclick="calcular(`value`, 6)" type="button">6</button>
+          <button class="calculator_button text-monospace" onclick="calcular(`action`, `*`)" type="button">x</button>
+
+          <button class="calculator_button number_button text-monospace ml-2 mr-3" onclick="calcular(`value`, 1)" type="button">1</button>
+          <button class="calculator_button number_button text-monospace mr-3" onclick="calcular(`value`, 2)" type="button">2</button>
+          <button class="calculator_button number_button text-monospace mr-3" onclick="calcular(`value`, 3)" type="button">3</button>
+          <button class="calculator_button text-monospace" onclick="calcular(`action`, `-`)" type="button">-</button>
+
+          <button class="calculator_button number_button text-monospace ml-2 mr-3" onclick="calcular(`value`, 0)" type="button">0</button>
+          <button class="calculator_button number_button text-monospace mr-3" onclick="calcular(`action`, `.`)" type="button">.</button>
+          <button class="calculator_button text-monospace bg-warning mr-3" onclick="calcular(`action`, `=`)" type="button">=</button>
+          <button class="calculator_button text-monospace" onclick="calcular(`action`, `+`)" type="button">+</button>
 
         </div>
       </section>
